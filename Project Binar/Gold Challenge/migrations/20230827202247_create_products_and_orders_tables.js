@@ -13,7 +13,7 @@ exports.up = function(knex) {
   //membuat tabel orders
   .createTable('orders', function(table) {
     table.increments('id').primary();
-    table.timestamp('datetime').defaultTo(knex.fn.now());
+    table.timestamp('datetime').defaultTo(knex.raw('CURRENT_TIMESTAMP at time zone \'Asia/Jakarta\'')).notNullable();
     table.integer('product_id').unsigned().references('id').inTable('products');
     table.string('product_name', 255).unsigned().references('name').inTable('products');
     table.decimal('quantity', 20);
