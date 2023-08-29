@@ -8,7 +8,7 @@ exports.up = function(knex) {
     table.increments('id').primary().unique();
     table.string('name', 255).notNullable().unique();
     table.string('description', 255);
-    table.decimal('price').notNullable().unique();
+    table.decimal('price', 20);
   })
   //membuat tabel orders
   .createTable('orders', function(table) {
@@ -16,12 +16,11 @@ exports.up = function(knex) {
     table.timestamp('datetime').defaultTo(knex.fn.now());
     table.integer('product_id').unsigned().references('id').inTable('products');
     table.string('product_name', 255).unsigned().references('name').inTable('products');
-    table.decimal('product_price').unsigned().references('price').inTable('products');
-    table.decimal('quantity').notNullable();
-    table.decimal('total_amount').notNullable();
+    table.decimal('quantity', 20);
+    table.decimal('total_amount', 20);
     table.string('name', 255).notNullable();
-    table.decimal('telephone').notNullable();
-    table.string('address', 255).notNullable();
+    table.decimal('telephone', 20);
+    table.string('address', 255);
   });
 };
 
