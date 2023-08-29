@@ -27,7 +27,7 @@ app.get('/api/products/:id', async (req, res) => {
         const data = await db.select('*').from('products').where('id', req.params.id).first();
 
         if(!data){
-            res.json({ status: 404, message: 'Product not found' });
+            res.json({ status: 404, message: 'Produk tidak ditemukan!' });
         }
 
         res.json({
@@ -53,7 +53,7 @@ app.post('/api/products', async (req, res) => {
             price: price
         })
 
-        res.status(201).json({status: 201, message: 'product successfully added'})
+        res.status(201).json({status: 201, message: 'Produk berhasil ditambahkan!'})
     } catch (error) {
         res.json({
             status : 500,
@@ -73,7 +73,7 @@ app.put('/api/products/:id', async (req, res) => {
             price: price
         })
 
-        res.status(201).json({status: 201, message: 'product successfully updated'})
+        res.status(201).json({status: 201, message: 'Produk berhasil diperbarui!'})
     } catch (error) {
         res.json({
             status : 500,
@@ -87,7 +87,7 @@ app.delete('/api/products/:id', async (req, res) => {
     try{
         const id = await db('products').where('id', req.params.id).delete().returning('id')
 
-        res.status(201).json({status: 201, message: 'product successfully deleted'})
+        res.status(201).json({status: 201, message: 'Produk berhasil dihapus!'})
     } catch (error) {
         res.json({
             status : 500,
