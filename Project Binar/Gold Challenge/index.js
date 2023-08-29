@@ -96,6 +96,74 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 })
 
+// membaca semua data order yang ada di database
+app.get('/api/orders', async (req, res) => {
+    try {
+        const data = await db.select('*').from('orders');
+
+        res.json({
+            status: 200,
+            data: data
+        })
+    } catch (error) {
+        res.json({
+            status : 500,
+            message: error.message
+        });
+    }
+})
+
+// membaca data order yang ada di database
+app.get('/api/orders/:id', async (req, res) => {
+    try {
+        const data = await db.select('*').from('orders').where('id', req.params.id).first();
+
+        if(!data){
+            res.json({ status: 404, message: 'Data tidak ditemukan!' });
+        }
+
+        res.json({
+            status: 200,
+            data: data
+        })
+    } catch (error) {
+        res.json({
+            status : 500,
+            message: error.message
+        });
+    }
+})
+
+// membuat data order baru dan disimpan ke database
+app.post('/api/orders', async (req, res) => {
+    try{
+        const {product_name, quantity, name, telephone, address} = req.body
+        
+        const product = await db('products').where('name', req.body.product_name).first();
+
+        if (!product) {
+            return res.status(404).json({ message: 'Produk tidak ditemukan' });
+        }
+              
+        await db('orders').insert({
+            product_id: product.id,
+            product_name: product.name,
+            product_price: product.price,
+            quantity: quantity,
+            total_amount: quantity * product.price,
+            name: name,
+            telephone: telephone,
+            address: address
+        })
+
+        res.status(201).json({status: 201, message: 'Data order berhasil ditambahkan!'})
+    } catch (error) {
+        res.json({
+            status : 500,
+            message: error.message
+        });
+    }
+})
 
 const PORT = 3000;
 app.listen(PORT, (req, res)=> {
