@@ -144,13 +144,16 @@ app.post('/api/orders', async (req, res) => {
         if (!product) {
             return res.status(404).json({ message: 'Produk tidak ditemukan' });
         }
-              
+        const price = product.price;
+        const total_amount = price * quantity
+        
+
         await db('orders').insert({
             product_id: product.id,
             product_name: product.name,
-            product_price: product.price,
+            product_price: price,
             quantity: quantity,
-            total_amount: quantity * product.price,
+            total_amount: total_amount,
             name: name,
             telephone: telephone,
             address: address
