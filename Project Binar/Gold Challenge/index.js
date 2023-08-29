@@ -166,6 +166,52 @@ app.post('/api/orders', async (req, res) => {
     }
 })
 
+// memperbarui data order yang ada di database
+app.put('/api/orders/:id', async (req, res) => {
+    try{
+        const {product_name, quantity, name, telephone, address} = req.body
+        
+        const product = await db('products').where('name', req.body.product_name).first();
+
+        if (!product) {
+            return res.status(404).json({ message: 'Produk tidak ditemukan' });
+        }
+
+        const total_amount = product.price * quantity;
+        
+        await db('orders').where('id', req.params.id).update({
+            product_id: product.id,
+            product_name: product.name,
+            quantity: quantity,
+            total_amount: total_amount,
+            name: name,
+            telephone: telephone,
+            address: address
+        })
+
+        res.status(201).json({status: 201, message: 'Data order berhasil diperbarui!'})
+    } catch (error) {
+        res.json({
+            status : 500,
+            message: error.message
+        });
+    }
+})
+
+// menghapus data order yang ada di database
+app.delete('/api/orders/:id', async (req, res) => {
+    try{
+        const id = await db('orders').where('id', req.params.id).delete().returning('id')
+
+        res.status(201).json({status: 201, message: 'Data order berhasil dihapus!'})
+    } catch (error) {
+        res.json({
+            status : 500,
+            message: error.message
+        });
+    }
+})
+
 const PORT = 3000;
 app.listen(PORT, (req, res)=> {
     console.log(`Listening on port ${PORT}`)
