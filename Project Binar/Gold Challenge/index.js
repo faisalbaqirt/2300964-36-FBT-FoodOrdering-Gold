@@ -219,7 +219,7 @@ app.delete('/api/orders/:id', async (req, res) => {
     }
 })
 
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, (req, res)=> {
     console.log(`Listening on port ${PORT}`)
 })
