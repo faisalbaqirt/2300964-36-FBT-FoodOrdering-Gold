@@ -5,6 +5,7 @@ const orderRouter = require('./routes/orderRoutes')
 app.use(express.json());
 
 app.set('view-engine', 'ejs');
+app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
