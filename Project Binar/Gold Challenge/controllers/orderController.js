@@ -5,7 +5,7 @@ class Controller {
         try{
             const {product_name, quantity, name, telephone, address} = req.body
             
-            const product = await db('products').where('name', req.body.product_name).first();
+            const product = await db('products').where('name', product_name).first();
     
             if (!product) {
                 return res.status(404).json({ message: 'Produk tidak ditemukan' });
@@ -23,7 +23,7 @@ class Controller {
                 address: address
             })
     
-            res.status(201).redirect('/');
+            res.status(201).json({ status: 201, message: 'Data order berhasil ditambahkan!' });
         } catch (error) {
             res.json({
                 status : 500,
