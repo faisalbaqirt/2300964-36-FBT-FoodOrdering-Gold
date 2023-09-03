@@ -4,31 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Order</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/orderStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
 </head>
-<body>
-    <h1>Form Pemesanan Produk</h1>
-    <form id="order-form">
-        <label for="product_name">Nama Produk:</label>
-        <select id="product_name" name="product_name" required>
-            <option value="paket ayam geprek">Paket Ayam Geprek</option>
-            <option value="ayam geprek">Ayam Geprek</option>
-        </select><br>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation
+  ==========================================-->
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container"> 
+  <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+          
+          <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/#header" class="page-scroll">Home</a></li>
+          <li><a href="/#restaurant-menu" class="page-scroll">Menu</a></li>
+          <li><a href="/order">Order</a></li>
+          <li><a href="/#contact" class="page-scroll">Contact</a></li>
+        </ul>
+      </div>
+          <!-- /.navbar-collapse --> 
+    </div>
+  </nav>
+      <!-- Header -->
+  <header id="header">
+    <div class="intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="intro-text">
+              <h1>Ayam Geprek Mang Iyok</h1>
+              <p>Reservations: (+62) 822 1854 2511</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="order">
+    <div class="container">
+      <div class="section-title text-center">
+        <h3>Form Pemesanan Produk</h3>
+      </div>
+      <div clas="col-md-6">
+        <form id="order-form">
+          <label for="product_name">Nama Produk:</label>
+          <select id="product_name" class="form-control"  name="product_name" required>
+              <option value="paket ayam geprek">Paket Ayam Geprek</option>
+              <option value="ayam geprek">Ayam Geprek</option>
+          </select><br>
+  
+          <label for="quantity">Jumlah:</label>
+          <input type="number" id="quantity" class="form-control" name="quantity" required><br>
+  
+          <label for="name">Nama Pemesan:</label>
+          <input type="text" id="name" class="form-control" name="name" required><br>
+  
+          <label for="telephone">Telepon:</label>
+          <input type="text" id="telephone" class="form-control" name="telephone" required><br>
+  
+          <label for="address">Alamat:</label>
+          <input type="text" id="address" class="form-control" name="address" required><br>
+  
+          <button type="submit">Pesan</button>
+        </form>
+      </div>
 
-        <label for="quantity">Jumlah:</label>
-        <input type="number" id="quantity" name="quantity" required><br>
+    </div>
+  </div>
+     
+    <div id="footer">
+      <div class="container text-center">
+        <p>&copy; 2023 Faisal Baqir Tahmidi</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.1.11.1.js"></script> 
+    <script type="text/javascript" src="../js/bootstrap.js"></script> 
+    <script type="text/javascript" src="../js/SmoothScroll.js"></script> 
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script>
+        // Saat dokumen siap
+        $(document).ready(function() {
+            // Periksa apakah tautan Home pada halaman order.html ditekan
+            $('a[href="/#home"]').on('click', function(event) {
+                // Hentikan perilaku tautan default
+                event.preventDefault();
+                
+                // Gulir ke bagian 'home' di halaman utama ("/")
+                $('html, body').animate({
+                    scrollTop: $('#home').offset().top
+                }, 800); // Durasi animasi dalam milidetik
+            });
+    
+            // Periksa apakah tautan Menu pada halaman order.html ditekan
+            $('a[href="/#menu"]').on('click', function(event) {
+                // Hentikan perilaku tautan default
+                event.preventDefault();
+                
+                // Gulir ke bagian 'menu' di halaman utama ("/")
+                $('html, body').animate({
+                    scrollTop: $('#menu').offset().top
+                }, 800); // Durasi animasi dalam milidetik
+            });
+    
+            $(document).ready(function() {
+    // Periksa apakah URL saat ini berakhir dengan "#contact"
+    if (window.location.href.endsWith("#contact")) {
+        // Gulir ke elemen 'contact'
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 800); // Durasi animasi dalam milidetik
+    }
+});
 
-        <label for="name">Nama Pemesan:</label>
-        <input type="text" id="name" name="name" required><br>
-
-        <label for="telephone">Telepon:</label>
-        <input type="text" id="telephone" name="telephone" required><br>
-
-        <label for="address">Alamat:</label>
-        <input type="text" id="address" name="address" required><br>
-
-        <button type="submit">Pesan</button>
-    </form>
-
+        });
+    </script>
+    
     <script>
        document.getElementById('order-form').addEventListener('submit', async function(event) {
             event.preventDefault();
