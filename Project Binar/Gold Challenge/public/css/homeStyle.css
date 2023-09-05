@@ -202,52 +202,6 @@ header .intro-text {
 }
 
 /* Menu Section */
-#restaurant-menu {
-	padding: 100px 0 60px 0;
-}
-#restaurant-menu img {
-	width: 300px;
-	box-shadow: 15px 0 #a7c44c;
-}
-#restaurant-menu h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-#restaurant-menu .menu-section hr {
-	margin: 0 auto;
-}
-#restaurant-menu .menu-section {
-	margin: 0 20px 80px;
-}
-#restaurant-menu .menu-section-title {
-	font-size: 32px;
-	display: block;
-	font-weight: 400;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
-}
-#restaurant-menu .menu-item {
-	margin: 45px 0;
-	font-size: 18px;
-}
-#restaurant-menu .menu-item-name {
-	font-weight: 400;
-	font-size: 20px;
-	color: #444;
-	margin-bottom: 10px;
-}
-#restaurant-menu .menu-item-description {
-	font-size: 15px;
-	width: 85%;
-}
-#restaurant-menu .menu-item-price {
-	float: right;
-	font-weight: 400;
-	color: #555;
-	margin-top: -36px;
-}
-
 #products {
 	padding: 50px 0;
 }
@@ -258,22 +212,20 @@ header .intro-text {
 	background-color: #333;
     border: none; 
 	border-radius: 10px;
-	height: 500px;
     margin-bottom: 20px;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
 	align-items: center;
     transition: transform 0.3s ease-in-out;
-	display: flex; /* Tambahkan display flex */
-  	flex-direction: column; /* Atur flex-direction ke column untuk mengatur elemen secara vertikal */
-  	justify-content: flex-start; 
+	box-shadow: 0 -1px 30px 1px black;
   }
-  
 .card:hover{
     transform: scale(1.05); /* Efek zoom ketika dihover */
 }
-  
 .card-img-top{
 	width: 100%;
-	height: auto;
+	height: 200px;
 	border-radius: 10px 10px 0 0;
 	object-fit: cover;
 }
