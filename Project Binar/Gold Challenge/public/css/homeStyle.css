@@ -213,9 +213,9 @@ header .intro-text {
     border: none; 
 	border-radius: 10px;
     margin-bottom: 20px;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 300px;
-	margin: 0 auto;
 	align-items: center;
     transition: transform 0.3s ease-in-out;
 	box-shadow: 0 -1px 30px 1px black;
@@ -234,6 +234,19 @@ header .intro-text {
 }
 .card-title{
 	color: #aaa;
+}
+/* Layar PC */
+@media (min-width: 768px) {
+    .row{
+		display: flex;
+		justify-content: center;
+	}
+}
+/* Layar HP */
+@media (max-width: 767px) {
+    .card {
+        margin: 20px auto;
+    }
 }
 /* Contact Section */
 #contact {
