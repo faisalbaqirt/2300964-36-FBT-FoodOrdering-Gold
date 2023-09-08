@@ -62,12 +62,9 @@ a:hover, a:focus {
 }
 ul, ol {
 	list-style: none;
-}
-ul, ol {
 	padding: 0;
-	/* webkit-padding: 0;
-	moz-padding: 0; */
 }
+
 .btn:active, .btn.active {
 	background-image: none;
 	outline: 0;
@@ -235,7 +232,7 @@ header .intro-text {
 .card-title{
 	color: #aaa;
 }
-/* Layar PC */
+/* Layar Tablet, PC ++ */
 @media (min-width: 768px) {
     .row{
 		display: flex;
