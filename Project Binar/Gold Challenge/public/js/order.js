@@ -44,21 +44,26 @@ document.getElementById('order-form').addEventListener('submit', async function(
             const order_id = responseData.order_id;
             console.log('Order ID:', order_id);
 
+            // fungsi huruf kapital di awal kata
+            function kapitalisasi(text) {
+                return text.toLowerCase().replace(/^.|\s\S/g, (letter) => letter.toUpperCase());
+            }
 
             // menampilkan informasi invoice
-            document.getElementById('invoice-id').textContent = `No. Invoice : 00${order_id.id}`;
-            document.getElementById('invoice-product').textContent = product_name;
+            document.getElementById('invoice-id').textContent = `00${order_id.id}`;
+            document.getElementById('invoice-product').textContent = kapitalisasi(product_name);
             document.getElementById('invoice-quantity').textContent = quantity;
-            document.getElementById('invoice-price').textContent = price; // Harga produk
-            document.getElementById('invoice-name').textContent = name;
-            document.getElementById('invoice-address').textContent = address;
+            document.getElementById('invoice-price').textContent = `Rp. ${price.toLocaleString()}`;
+            document.getElementById('invoice-name').textContent = kapitalisasi(name);
+            document.getElementById('invoice-address').textContent = kapitalisasi(address);
+            document.getElementById('invoice-total-table').textContent =`Rp. ${total.toLocaleString()}`;
 
             // set waktu jakarta/wib
             const currentTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" });
             document.getElementById('invoice-time').textContent = currentTime;
 
             // menampilkan total pembayaran
-            document.getElementById('invoice-total').textContent = total;
+            document.getElementById('invoice-total-payment').textContent =`Rp. ${total.toLocaleString()}`;
         } else {
             // jika status selain 201
             console.error('Order failed with status:', response.status);
@@ -69,7 +74,7 @@ document.getElementById('order-form').addEventListener('submit', async function(
 });
 
 //menampilkan kembali tampilan order dan menyembunyikan tampilan invoice
-document.getElementById('back-to-form').addEventListener('click', function() {
+document.getElementById('back-to-order').addEventListener('click', function() {
   document.getElementById('order').style.display = 'block';
   document.getElementById('invoice').style.display = 'none';
 });
