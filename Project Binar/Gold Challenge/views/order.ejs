@@ -1,165 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Order</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/orderStyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
-</head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <!-- Navigation
-  ==========================================-->
-  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container"> 
-  <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/orderStyle.css" />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rochester"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- navigation -->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/#header" class="page-scroll">Home</a></li>
+            <li><a href="/#restaurant-menu" class="page-scroll">Menu</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="/#contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div>
       </div>
-          
-          <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="/#header" class="page-scroll">Home</a></li>
-          <li><a href="/#restaurant-menu" class="page-scroll">Menu</a></li>
-          <li><a href="/order">Order</a></li>
-          <li><a href="/#contact" class="page-scroll">Contact</a></li>
-        </ul>
-      </div>
-          <!-- /.navbar-collapse --> 
-    </div>
-  </nav>
-      <!-- Header -->
-  <header id="header">
-    <div class="intro">
-      <div class="overlay">
-        <div class="container">
-          <div class="row">
-            <div class="intro-text">
-              <h1>Ayam Geprek Mang Iyok</h1>
-              <p>Reservations: (+62) 822 1854 2511</p>
+    </nav>
+    <!-- header -->
+    <header id="header">
+      <div class="intro">
+        <div class="overlay">
+          <div class="container">
+            <div class="row">
+              <div class="intro-text">
+                <h1>Ayam Geprek Mang Iyok</h1>
+                <p>Reservations: (+62) 822 1854 2511</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <div id="order">
-    <div class="container">
+    </header>
+    <!-- order -->
+    <div id="order" class="container" style="display: block">
       <div class="section-title text-center">
-        <h3>Form Pemesanan Produk</h3>
+        <h2>Form Pemesanan Produk</h2>
       </div>
-      <div clas="col-md-6">
+      <div class="order-content">
         <form id="order-form">
           <label for="product_name">Nama Produk:</label>
-          <select id="product_name" class="form-control"  name="product_name" required>
-              <option value="paket ayam geprek">Paket Ayam Geprek</option>
-              <option value="ayam geprek">Ayam Geprek</option>
-          </select><br>
-  
+          <select
+            id="product_name"
+            class="form-control"
+            name="product_name"
+            required
+          >
+            <option value="paket ayam geprek">Paket Ayam Geprek</option>
+            <option value="ayam geprek">Ayam Geprek</option></select
+          ><br />
+
           <label for="quantity">Jumlah:</label>
-          <input type="number" id="quantity" class="form-control" name="quantity" required><br>
-  
+          <input
+            type="number"
+            id="quantity"
+            class="form-control"
+            name="quantity"
+            required
+          /><br />
+
           <label for="name">Nama Pemesan:</label>
-          <input type="text" id="name" class="form-control" name="name" required><br>
-  
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            name="name"
+            required
+          /><br />
+
           <label for="telephone">Telepon:</label>
-          <input type="text" id="telephone" class="form-control" name="telephone" required><br>
-  
+          <input
+            type="text"
+            id="telephone"
+            class="form-control"
+            name="telephone"
+            required
+          /><br />
+
           <label for="address">Alamat:</label>
-          <input type="text" id="address" class="form-control" name="address" required><br>
-  
-          <button type="submit">Pesan</button>
+          <input
+            type="text"
+            id="address"
+            class="form-control"
+            name="address"
+            required
+          /><br />
+
+          <button type="submit" id="create-order" class="btn-order">Pesan</button>
         </form>
       </div>
-
     </div>
-  </div>
-     
+    <!-- invoice -->
+    <div id="invoice" class="container" style="display: none;">
+      <div class="section-title text-center">
+        <h2>Invoice</h2>
+      </div>
+      <div class="invoice-head">
+        <div class="left-column">
+          <p>Tanggal      :<span id="invoice-time"></span></p>
+          <p>No. Invoice  :<span id="invoice-id"></span></p>
+        </div>
+        <div class="right-column">
+          <div>
+            <p>Kepada:</p>
+            <p><span id="invoice-name"></span></p>
+            <p><span id="invoice-address"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="invoice-table">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th id="table-product">PRODUK</th>
+              <th id="table-quantity">JUMLAH</th>
+              <th id="table-price">HARGA</th>
+              <th id="table-total">TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span id="invoice-product"></span></td>
+              <td><span id="invoice-quantity"></span></td>
+              <td><span id="invoice-price"></span></td>
+              <td><span id="invoice-total-table"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="invoice-payment">
+        <div class="row">
+          <div class="col-md-6 text-right" id="total-invoice" >
+            <p>
+              <strong>TOTAL PEMBAYARAN:</strong>
+              <strong><span id="invoice-total-payment"></span></strong>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p>
+              <strong>METODE PEMBAYARAN</strong><br />
+              Bank BCA<br />
+              No. Rekening: 4370566971<br />
+              Atas nama Tahmid Sanusi Kartawinata<br>
+              <br>
+              <strong>KONFIRMASI PEMBAYARAN</strong><br />
+              (+62) 822 1854 2511
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="invoice-foot">
+        <button id="back-to-order" class="btn-order">Back</button>
+        <p class="note"><em>Note: Segera lakukan pembayaran agar pesanan segera diproses</em></p>
+      </div>
+    </div>
+
+    <!-- footer -->
     <div id="footer">
       <div class="container text-center">
         <p>&copy; 2023 Faisal Baqir Tahmidi</p>
       </div>
     </div>
-    <script type="text/javascript" src="../js/jquery.1.11.1.js"></script> 
-    <script type="text/javascript" src="../js/bootstrap.js"></script> 
-    <script type="text/javascript" src="../js/SmoothScroll.js"></script> 
+    <script type="text/javascript" src="../js/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/order.js"></script>
     <script>
-        // Saat dokumen siap
-        $(document).ready(function() {
-            // Periksa apakah tautan Home pada halaman order.html ditekan
-            $('a[href="/#home"]').on('click', function(event) {
-                // Hentikan perilaku tautan default
-                event.preventDefault();
-                
-                // Gulir ke bagian 'home' di halaman utama ("/")
-                $('html, body').animate({
-                    scrollTop: $('#home').offset().top
-                }, 800); // Durasi animasi dalam milidetik
-            });
-    
-            // Periksa apakah tautan Menu pada halaman order.html ditekan
-            $('a[href="/#menu"]').on('click', function(event) {
-                // Hentikan perilaku tautan default
-                event.preventDefault();
-                
-                // Gulir ke bagian 'menu' di halaman utama ("/")
-                $('html, body').animate({
-                    scrollTop: $('#menu').offset().top
-                }, 800); // Durasi animasi dalam milidetik
-            });
-    
-            $(document).ready(function() {
-    // Periksa apakah URL saat ini berakhir dengan "#contact"
-    if (window.location.href.endsWith("#contact")) {
-        // Gulir ke elemen 'contact'
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top
-        }, 800); // Durasi animasi dalam milidetik
-    }
-});
+      // link untuk navbar
+      $(document).ready(function () {
+        $('a[href="/#home"]').on("click", function (event) {
+          event.preventDefault();
 
+          // scroll ke bagian home di halaman "/"
+          $("html, body").animate(
+            {
+              scrollTop: $("#home").offset().top,
+            },
+            800
+          );
         });
-    </script>
-    
-    <script>
-       document.getElementById('order-form').addEventListener('submit', async function(event) {
-            event.preventDefault();
 
-            const product_name = document.getElementById('product_name').value;
-            const quantity = parseInt(document.getElementById('quantity').value);
-            const name = document.getElementById('name').value;
-            const telephone = document.getElementById('telephone').value;
-            const address = document.getElementById('address').value;
-
-            try {
-                const response = await fetch('/order', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        product_name,
-                        quantity,
-                        name,
-                        telephone,
-                        address
-                    })
-                });
-
-                
-                // Redirect to home page after successful submission
-                if (response.status === 201) {
-                    window.location.href = '/';
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
+        $('a[href="/#menu"]').on("click", function (event) {
+          event.preventDefault();
+          // scroll ke bagian menu di halaman "/"
+          $("html, body").animate(
+            {
+              scrollTop: $("#menu").offset().top,
+            },
+            800
+          );
         });
+
+        $(document).ready(function () {
+          if (window.location.href.endsWith("#contact")) {
+            // scroll ke bagian contact di halaman "/"
+            $("html, body").animate(
+              {
+                scrollTop: $("#contact").offset().top,
+              },
+              800
+            );
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
