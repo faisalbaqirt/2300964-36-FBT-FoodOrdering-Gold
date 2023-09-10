@@ -7,7 +7,7 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
-h1, h2, h3, h4 {
+h1, h2{
 	font-family: 'Raleway', sans-serif;
 }
 h2 {
@@ -30,22 +30,6 @@ h2::after {
 	margin-left: -35px;
 	left: 50%;
 }
-h3 {
-	font-size: 24px;
-	font-weight: 400;
-	color: #333;
-}
-h4 {
-	font-size: 24px;
-	text-transform: uppercase;
-	font-weight: 400;
-	color: #333;
-}
-h5 {
-	text-transform: uppercase;
-	font-weight: 700;
-	line-height: 20px;
-}
 p {
 	font-size: 15px;
 }
@@ -53,30 +37,9 @@ p.intro {
 	margin: 12px 0 0;
 	line-height: 24px;
 }
-a {
-	color: #8eb640;
-}
-a:hover, a:focus {
-	text-decoration: none;
-	color: #222;
-}
 ul, ol {
 	list-style: none;
-}
-ul, ol {
 	padding: 0;
-	/* webkit-padding: 0;
-	moz-padding: 0; */
-}
-.btn:active, .btn.active {
-	background-image: none;
-	outline: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
-	outline: none;
-	outline-offset: none;
 }
 /* Navigation */
 .navbar .navbar-nav {
@@ -130,39 +93,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
 }
-.section-title {
-	margin-bottom: 70px;
-}
-.section-title .overlay {
-	padding: 80px 0;
-	background: rgba(0, 0, 0, 0.7);
-}
-.section-title p {
-	font-size: 22px;
-}
-.section-title hr {
-	margin: 0 auto;
-	margin-bottom: 40px;
-}
-.btn-custom {
-	text-transform: uppercase;
-	color: #777;
-	background-color: transparent;
-	border: 2px solid #777;
-	padding: 14px 20px;
-	margin: 0;
-	font-size: 15px;
-	font-weight: 500;
-	letter-spacing: 0.5px;
-	border-radius: 0;
-	margin-top: 20px;
-	transition: all 0.3s;
-}
-.btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
-	color: #ddd;
-	border: 2px solid #d43031;
-	background-color: #d43031;
-}
 /* Header Section */
 .intro {
 	display: table;
@@ -185,10 +115,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-weight: 400;
 	margin-top: 0;
 }
-.intro span {
-	color: #a7c44c;
-	font-weight: 600;
-}
 .intro p {
 	color: #fff;
 	font-size: 24px;
@@ -200,131 +126,23 @@ header .intro-text {
 	padding-bottom: 50px;
 	text-align: center;
 }
-
-/* Menu Section */
-#restaurant-menu {
-	padding: 100px 0 60px 0;
-}
-#restaurant-menu img {
-	width: 300px;
-	box-shadow: 15px 0 #a7c44c;
-}
-#restaurant-menu h3 {
-	padding: 10px 0;
-	text-transform: uppercase;
-}
-#restaurant-menu .menu-section hr {
-	margin: 0 auto;
-}
-#restaurant-menu .menu-section {
-	margin: 0 20px 80px;
-}
-#restaurant-menu .menu-section-title {
-	font-size: 32px;
-	display: block;
-	font-weight: 400;
-	color: #444;
-	margin: 20px 0;
-	text-align: center;
-}
-#restaurant-menu .menu-item {
-	margin: 45px 0;
-	font-size: 18px;
-}
-#restaurant-menu .menu-item-name {
-	font-weight: 400;
-	font-size: 20px;
-	color: #444;
-	margin-bottom: 10px;
-}
-#restaurant-menu .menu-item-description {
-	font-size: 15px;
-	width: 85%;
-}
-#restaurant-menu .menu-item-price {
-	float: right;
-	font-weight: 400;
-	color: #555;
-	margin-top: -36px;
-}
-/* Contact Section */
-#contact {
-	padding: 5px 0;
-	background: #333;
-}
-#contact .contact-item p {
-	font-size: 15px;
-	color: #777;
-}
-#contact h2 {
-	position: relative;
-	text-transform: uppercase;
-	font-size: 24px;
-	font-weight: 400;
-	color: #aaa;
-	padding: 20px 0;
-}
-
-#contact h3 {
-	position: relative;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: 400;
-	color: #aaa;
-	padding: 20px 0;
-}
-#contact h3::after {
-	position: absolute;
-	content: "";
-	background: #d43031;
-	height: 2px;
-	width: 40px;
-	bottom: 0;
-	margin-left: -20px;
-	left: 50%;
-}
-
-#contact .contact-item {
-	margin: 20px 0 40px 0;
-}
-#contact .contact-item span {
-	font-weight: 400;
-	color: #aaa;
-	text-transform: uppercase;
-	margin-bottom: 6px;
-	display: inline-block;
-}
 /* Order */
-/* Mengatur tampilan input box agar ada di sebelah kanan label */
-#order-form label {
-    display: flex;
-	float: right;
-    justify-content: flex-end;
-    /* align-items: center; */
-    margin-bottom: 10px; /* Menambahkan jarak antara label dan input */
+#order {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
-
-/* Mengubah warna placeholder dalam textbox menjadi hitam */
+#order-form{
+	padding: 20px;
+}
 #order-form .form-control::placeholder {
-    color: black; /* Ubah warna placeholder sesuai yang Anda inginkan */
+    color: black; 
 }
-
 #order .form-control {
-	
-	width: 75%;
+	width: 100%;
 	padding: 6px 12px;
 	font-size: 16px;
 	line-height: 1.42857143;
-	/* color:rgba(255,255,255,.2); */
 	background-color: #ccc;
-	background-image: none;
-	border: 0;
-	border-radius: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	-webkit-transition: none;
-	-o-transition: none;
-	transition: none;
 }
 #order.form-control:focus {
 	border-color: rgba(255,255,255,.2);
@@ -332,14 +150,92 @@ header .intro-text {
 	-webkit-box-shadow: transparent;
 	box-shadow: transparent;
 }
+#create-order {
+	background-color: #fff;
+	color: #333;
+	border: 2px solid #333;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	align-items: center;
+  }
+#create-order:hover{
+	color:#d43031;
+	border: 2px solid #d43031;
+	background-color: #fff;
+}
+/* Invoice */
+#invoice{
+	padding: 20px;
+	background: #333;
+	width: 100%;
+	color: #888;
+}
+#invoice h2{
+	color: #aaa;
+}
+.invoice-head {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.invoice-head .left-column {
+	flex: 1;
+	text-align: left;
+}
+.invoice-head .right-column{
+	flex: 1;
+	text-align: right;
+}
 
+#invoice .invoice-table{
+	padding: 20px;
+}
+  
+#invoice .table th, #invoice .table td{
+	border: 1px solid #444;
+	padding: 10px;
+	text-align: left;
+}
+#invoice .invoice-payment{
+	padding: 20px;
+}
+#total-invoice{
+	position: absolute;
+	right: 20px;
+}
+.invoice-foot{
+	text-align: left;
+	margin-top: 20px;
+}
+.invoice-foot .note{
+	font-size: 12px;
+	text-align: center;
+}
+#back-to-order{
+	position: relative;
+	left: 20px;
+	background-color: #333;
+	color: #888;
+	border: 2px solid #888;
+	border-radius: 10px;
+	font-weight: bold;
+	padding: 10px 20px;
+	cursor: pointer;
+	align-items: center;
+}
+#back-to-order:hover{
+	background-color: #333;
+	color:#d43031;
+	border: 2px solid #d43031;
+}
 /* Footer Section*/
-#footer {
+#footer{
 	background: #262626;
 	padding: 40px 0 20px 0;
 }
-
-#footer p {
+#footer p{
 	font-size: 14px;
 	color: #666;
 }
