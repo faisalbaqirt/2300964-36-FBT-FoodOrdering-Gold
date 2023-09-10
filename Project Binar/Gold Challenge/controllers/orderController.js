@@ -13,7 +13,7 @@ class Controller {
     
             const total_amount = product.price * quantity;
             
-            await db('orders').insert({
+            const [order_id] = await db('orders').insert({
                 product_id: product.id,
                 product_name: product.name,
                 quantity: quantity,
@@ -21,9 +21,11 @@ class Controller {
                 name: name,
                 telephone: telephone,
                 address: address
-            })
-    
-            res.status(201).json({ status: 201, message: 'Data order berhasil ditambahkan!' });
+            }).returning('id'); // Mengembalikan ID pesanan yang baru saja dibuat
+
+
+            
+            res.status(201).json({ status: 201, order_id: order_id, message: 'Data order berhasil ditambahkan!' });
         } catch (error) {
             res.json({
                 status : 500,
