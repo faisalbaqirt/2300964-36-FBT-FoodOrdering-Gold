@@ -220,6 +220,38 @@ app.delete('/api/orders/:id', async (req, res) => {
     }
 })
 
+// middleware jika route tidak cocok
+app.use((req, res) => {
+    res.status(404).send(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>404 Not Found</title>
+        <style>
+          body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px auto;
+          }
+          h1{
+            font-size: 200px;
+            margin-bottom: 5px;
+          }
+          p{
+            font-size: 60px;
+            margin-top: 0;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>404</h1>
+        <p>Page Not Found</p>
+      </body>
+      </html>
+    `)
+})
+
+
 const PORT = 3001;
 app.listen(PORT, (req, res)=> {
     console.log(`Listening on port ${PORT}`)

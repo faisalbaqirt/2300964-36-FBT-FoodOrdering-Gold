@@ -33,15 +33,11 @@ h2::after {
 p {
 	font-size: 15px;
 }
-p.intro {
-	margin: 12px 0 0;
-	line-height: 24px;
-}
-ul, ol {
+ul{
 	list-style: none;
 	padding: 0;
 }
-/* Navigation */
+/* navigation */
 .navbar .navbar-nav {
 	display: inline-block;
 	float: none;
@@ -50,15 +46,15 @@ ul, ol {
 .navbar .navbar-collapse {
 	text-align: center;
 }
-#menu {
+#navigation {
 	padding: 20px;
 	transition: all 0.8s;
 }
-#menu.navbar-default {
+#navigation.navbar-default {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
 }
-#menu.navbar-default .navbar-nav > li > a {
+#navigation.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #eee;
 	font-weight: 400;
@@ -68,7 +64,7 @@ ul, ol {
 	letter-spacing: 0.5px;
 	margin: 0 40px 0 40px;
 }
-#menu.navbar-default .navbar-nav > li > a:hover {
+#navigation.navbar-default .navbar-nav > li > a:hover {
 	color: #d43031;
 }
 .on {
@@ -93,7 +89,7 @@ ul, ol {
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
 }
-/* Header Section */
+/* header */
 .intro {
 	display: table;
 	width: 100%;
@@ -126,7 +122,7 @@ header .intro-text {
 	padding-bottom: 50px;
 	text-align: center;
 }
-/* Order */
+/* order */
 #order {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -188,15 +184,24 @@ header .intro-text {
 	flex: 1;
 	text-align: right;
 }
-
-#invoice .invoice-table{
-	padding: 20px;
+.invoice-table{
+	padding: 30px;
 }
-  
-#invoice .table th, #invoice .table td{
-	border: 1px solid #444;
-	padding: 10px;
+.invoice-table .row > div {
+    width: 25%;
+    text-align: center;
+    border: 1px solid #444;
+    padding: 20px;
+}
+#table-head{
+	font-weight: bold;
+}
+#table-product{
 	text-align: left;
+}
+#invoice-product{
+	text-align: left !important;
+	display: block !important;
 }
 #invoice .invoice-payment{
 	padding: 20px;

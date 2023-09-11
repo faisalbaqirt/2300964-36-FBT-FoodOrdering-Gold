@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Order</title>
+    <title>Ayam Geprek Mang Iyok</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/orderStyle.css" />
     <!-- font -->
@@ -23,7 +24,7 @@
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- navigation -->
-    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button
@@ -40,8 +41,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="/#header" class="page-scroll">Home</a></li>
-            <li><a href="/#restaurant-menu" class="page-scroll">Menu</a></li>
-            <li><a href="#order">Order</a></li>
+            <li><a href="/#products" class="page-scroll">Menu</a></li>
+            <li><a href="#order" class="page-scroll">Order</a></li>
             <li><a href="/#contact" class="page-scroll">Contact</a></li>
           </ul>
         </div>
@@ -139,34 +140,28 @@
         </div>
       </div>
       <div class="invoice-table">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th id="table-product">PRODUK</th>
-              <th id="table-quantity">JUMLAH</th>
-              <th id="table-price">HARGA</th>
-              <th id="table-total">TOTAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span id="invoice-product"></span></td>
-              <td><span id="invoice-quantity"></span></td>
-              <td><span id="invoice-price"></span></td>
-              <td><span id="invoice-total-table"></span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row" id="table-head">
+          <div class="col-md-3 col-xs-3" id="table-product">PRODUK</div>
+          <div class="col-md-3 col-xs-3" id="table-price">HARGA</div>
+          <div class="col-md-3 col-xs-3" id="table-quantity">JUMLAH</div>
+          <div class="col-md-3 col-xs-3" id="table-total">TOTAL</div>
+        </div>
+        <div class="row" id="table-body">
+          <div class="col-md-3 col-xs-3"><span id="invoice-product"></span></div>
+          <div class="col-md-3 col-xs-3"><span id="invoice-price"></span></div>
+          <div class="col-md-3 col-xs-3"><span id="invoice-quantity"></span></div>
+          <div class="col-md-3 col-xs-3"><span id="invoice-total-table"></span></div>
+        </div>
       </div>
       <div class="invoice-payment">
         <div class="row">
-          <div class="col-md-6 text-right" id="total-invoice" >
+          <div class="col-md-6 col-xs-6 text-right" id="total-invoice" >
             <p>
               <strong>TOTAL PEMBAYARAN:</strong>
               <strong><span id="invoice-total-payment"></span></strong>
             </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-xs-6">
             <p>
               <strong>METODE PEMBAYARAN</strong><br />
               Bank BCA<br />
@@ -191,49 +186,9 @@
         <p>&copy; 2023 Faisal Baqir Tahmidi</p>
       </div>
     </div>
-    <script type="text/javascript" src="../js/jquery.1.11.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/SmoothScroll.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/order.js"></script>
-    <script>
-      // link untuk navbar
-      $(document).ready(function () {
-        $('a[href="/#home"]').on("click", function (event) {
-          event.preventDefault();
-
-          // scroll ke bagian home di halaman "/"
-          $("html, body").animate(
-            {
-              scrollTop: $("#home").offset().top,
-            },
-            800
-          );
-        });
-
-        $('a[href="/#menu"]').on("click", function (event) {
-          event.preventDefault();
-          // scroll ke bagian menu di halaman "/"
-          $("html, body").animate(
-            {
-              scrollTop: $("#menu").offset().top,
-            },
-            800
-          );
-        });
-
-        $(document).ready(function () {
-          if (window.location.href.endsWith("#contact")) {
-            // scroll ke bagian contact di halaman "/"
-            $("html, body").animate(
-              {
-                scrollTop: $("#contact").offset().top,
-              },
-              800
-            );
-          }
-        });
-      });
-    </script>
   </body>
 </html>

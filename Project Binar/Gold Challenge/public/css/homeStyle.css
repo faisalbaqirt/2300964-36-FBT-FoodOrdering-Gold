@@ -161,6 +161,27 @@ header .intro-text {
 .card-title{
 	color: #aaa;
 }
+.order-link{
+	margin: 0 auto;
+	margin-top: 60px;
+}
+#order-here {
+	background-color: #fff;
+	color: #333;
+	border: 2px solid #333;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	align-items: center;
+  }
+#order-here:hover{
+	color:#d43031;
+	border: 2px solid #d43031;
+	background-color: #fff;
+}
 /* Layar Tablet, PC ++ */
 @media (min-width: 768px) {
     .row{
