@@ -1,0 +1,244 @@
+body, html{
+	font-family: 'Open Sans', serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #777;
+	font-weight: 400;
+	width: 100% !important;
+	height: 100% !important;
+}
+h1, h2, h3{
+	font-family: 'Raleway', sans-serif;
+}
+h2{
+	font-weight: 400;
+	font-size: 38px;
+	color: #333;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+}
+h2::after{
+	position: absolute;
+	content: "";
+	background: #d43031;
+	height: 2px;
+	width: 70px;
+	bottom: 0;
+	margin-left: -35px;
+	left: 50%;
+}
+h3{
+	font-size: 24px;
+	font-weight: 400;
+	color: #333;
+}
+p{
+	font-size: 15px;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+/* Navigation */
+.navbar .navbar-nav{
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+}
+.navbar .navbar-collapse{
+	text-align: center;
+}
+#navigation{
+	padding: 20px;
+	transition: all 0.8s;
+}
+#navigation.navbar-default{
+	background-color: rgba(248, 248, 248, 0);
+	border-color: rgba(231, 231, 231, 0);
+}
+#navigation.navbar-default .navbar-nav > li > a {
+	text-transform: uppercase;
+	color: #eee;
+	font-weight: 400;
+	font-size: 15px;
+	padding: 5px 0;
+	border: 2px solid transparent;
+	letter-spacing: 0.5px;
+	margin: 0 40px 0 40px;
+}
+#navigation.navbar-default .navbar-nav > li > a:hover {
+	color: #d43031;
+}
+.on {
+	background-color: #262626 !important;
+	padding: 0 !important;
+	padding: 10px 0 !important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #d43031 !important;
+	background-color: transparent;
+}
+.navbar-toggle {
+	border-radius: 0;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #d43031;
+	border-color: #d43031;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFF;
+}
+.navbar-default .navbar-toggle:hover>.icon-bar {
+	background-color: #FFF;
+}
+/* header */
+.intro {
+	display: table;
+	width: 100%;
+	padding: 0;
+	background: url(../img/bgayamgeprek.jpg) center center no-repeat;
+	background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.intro .overlay {
+	background: rgba(0,0,0,0.4);
+}
+.intro h1 {
+	font-family: 'Rochester', cursive;
+	color: #fff;
+	font-size: 10em;
+	font-weight: 400;
+	margin-top: 0;
+}
+.intro p {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 150px;
+}
+header .intro-text {
+	padding-top: 200px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+/* menu */
+#products {
+	padding: 50px 0;
+}
+#products h2{
+	text-align: center;
+}
+.card{
+	background-color: #333;
+    border: none; 
+	border-radius: 10px;
+    margin-bottom: 20px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 300px;
+	align-items: center;
+    transition: transform 0.3s ease-in-out;
+	box-shadow: 0 -1px 30px 1px black;
+  }
+.card:hover{
+    transform: scale(1.05); 
+}
+.card-img-top{
+	width: 100%;
+	height: 200px;
+	border-radius: 10px 10px 0 0;
+	object-fit: cover;
+}
+.card-body{
+	padding: 20px;
+}
+.card-title{
+	color: #aaa;
+}
+.order-link{
+	margin: 0 auto;
+	margin-top: 60px;
+}
+#order-here {
+	background-color: #fff;
+	color: #333;
+	border: 2px solid #333;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+	align-items: center;
+  }
+#order-here:hover{
+	color:#d43031;
+	border: 2px solid #d43031;
+	background-color: #fff;
+}
+/* Layar Tablet, PC ++ */
+@media (min-width: 768px) {
+    .row{
+		display: flex;
+		justify-content: center;
+	}
+}
+/* Layar HP */
+@media (max-width: 767px) {
+    .card {
+        margin: 20px auto;
+    }
+}
+/* contact */
+#contact {
+	padding: 5px 0;
+	background: #333;
+}
+#contact .contact-item p {
+	font-size: 15px;
+	color: #777;
+}
+#contact h2 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 400;
+	color: #aaa;
+	padding: 20px 0;
+}
+#contact h3 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+	color: #aaa;
+	padding: 20px 0;
+}
+#contact h3::after {
+	position: absolute;
+	content: "";
+	background: #d43031;
+	height: 2px;
+	width: 40px;
+	bottom: 0;
+	margin-left: -20px;
+	left: 50%;
+}
+#contact .contact-item {
+	margin: 20px 0 40px 0;
+}
+/* footer*/
+#footer {
+	background: #262626;
+	padding: 40px 0 20px 0;
+}
+#footer p {
+	font-size: 14px;
+	color: #666;
+}
